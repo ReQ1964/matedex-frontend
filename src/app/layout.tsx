@@ -16,10 +16,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body>
+      <body className='bg-neutral-500'>
         <Theme>
-          <Navbar />
-          {children}
+          <div className='min-h-screen bg-gray-100'>
+            <Navbar />
+            {children}
+          </div>
         </Theme>
       </body>
     </html>
