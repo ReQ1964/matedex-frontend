@@ -16,11 +16,14 @@ const GuideItem = ({ link, title, icon }: BannerItemProps) => {
         justify='center'
         align='center'
         direction='column'
+        width='140px'
         className='p-15 rounded-xl border-2 border-gray-300 p-5 shadow-xl'
         gap='4'
       >
         <Image src={icon} alt={title} width={64} height={64} />
-        <Heading as='h2'>{title}</Heading>
+        <Heading as='h2' size='3'>
+          {title}
+        </Heading>
       </Flex>
     </Link>
   );

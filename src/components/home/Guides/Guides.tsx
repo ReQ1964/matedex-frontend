@@ -5,15 +5,35 @@ import GuideItem from '@/components/home/Guides/GuideItem';
 const Guides = () => {
   const guideItems = [
     {
-      link: 'item1',
+      link: '/guide/about',
       title: 'ABOUT YM',
       icon: '/icons/branch-leaves.png',
+    },
+    {
+      link: '/guide/types',
+      title: 'TYPES',
+      icon: '/icons/container-storage.png',
+    },
+    {
+      link: '/guide/benefits',
+      title: 'BENEFITS',
+      icon: '/icons/health.svg',
+    },
+    {
+      link: '/guide/preparation',
+      title: 'PREPARATION',
+      icon: '/icons/mate-tea.png',
+    },
+    {
+      link: '/guide/accessories',
+      title: 'ACCESSORIES',
+      icon: '/icons/thermo.png',
     },
   ];
 
   return (
     <Section size='1' px='4'>
-      <Flex align='center'>
+      <Flex align='center' justify='between'>
         {guideItems.map((guideItem) => {
           return (
             <GuideItem
