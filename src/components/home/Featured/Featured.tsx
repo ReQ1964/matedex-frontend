@@ -1,6 +1,6 @@
 import React from 'react';
 import { Flex, Heading, Section, Text } from '@radix-ui/themes';
-import FeaturedItemList from '@/components/home/Featured/FeaturedItemList';
+import FeaturedItemList from '@/components/home/Featured/FeaturedItemList/FeaturedItemList';
 
 const mockItems = [
   { name: 'Elaborada Seleccion Especial', company: 'Rosamonte', rating: 4.7 },

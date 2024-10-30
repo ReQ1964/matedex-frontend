@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
 import { TextField } from '@radix-ui/themes';
 import Image from 'next/image';
 
-const SearchInput = () => {
+const SearchTextBox = () => {
   const [inputValue, setInputValue] = React.useState('');
   const [debouncedInputValue, setDebouncedInputValue] = React.useState('');
 
@@ -39,4 +39,4 @@ const SearchInput = () => {
     </TextField.Root>
   );
 };
-export default SearchInput;
+export default SearchTextBox;

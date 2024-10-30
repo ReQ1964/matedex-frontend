@@ -2,7 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { Flex, Heading, Text, Link } from '@radix-ui/themes';
-import type { FeaturedItem as FeaturedItemType } from './FeaturedItemList';
+import type { FeaturedItem as FeaturedItemType } from '../FeaturedItemList/FeaturedItemList';
 
 interface FeaturedItemProps {
   item: FeaturedItemType;

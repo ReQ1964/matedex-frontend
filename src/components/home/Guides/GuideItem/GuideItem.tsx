@@ -17,7 +17,7 @@ const GuideItem = ({ link, title, icon }: BannerItemProps) => {
         align='center'
         direction='column'
         width='140px'
-        className='p-15 rounded-xl border-2 border-gray-300 p-5 shadow-xl'
+        className='rounded-xl border-2 border-gray-300 p-2 shadow-xl md:p-5'
         gap='4'
       >
         <Image src={icon} alt={title} width={64} height={64} />
