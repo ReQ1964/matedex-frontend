@@ -1,16 +1,9 @@
-import {
-  Box,
-  Container,
-  Flex,
-  Grid,
-  Section,
-  Avatar,
-  TabNav,
-} from '@radix-ui/themes';
+import { Box, Container, Flex, Grid, Section, Avatar } from '@radix-ui/themes';
 import Image from 'next/image';
 import SearchTextBox from '@/components/layout/SearchTextBox/SearchTextBox';
 import Link from 'next/link';
 import SideMenu from '@/components/layout/SideMenu/SideMenu';
+import MainTabNav from '@/components/layout/TabNav/MainTabNav';
 
 const Navbar = () => {
   return (
@@ -53,17 +46,7 @@ const Navbar = () => {
               <SearchTextBox />
             </Box>
           </Box>
-          <TabNav.Root
-            color='orange'
-            className='hidden py-2 md:flex'
-            justify='center'
-          >
-            <TabNav.Link href='/' active>
-              Home
-            </TabNav.Link>
-            <TabNav.Link href='#'>Documents</TabNav.Link>
-            <TabNav.Link href='#'>Settings</TabNav.Link>
-          </TabNav.Root>
+          <MainTabNav />
         </Grid>
       </Section>
     </Container>
