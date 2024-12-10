@@ -12,12 +12,10 @@
   "plugins": [
     "react",
     "react-hooks",
-    "typescript",
     "prettier",
     "boundaries"
   ],
   "rules": {
-    "simple-import-sort/sort": "error",
     "prettier/prettier": "error",
     "react/prop-types": "off",
     "react/jsx-uses-react": "off",
@@ -26,6 +24,16 @@
   "settings": {
     "react": {
       "version": "detect"
-    }
+    },
+    "boundaries/elements": [
+      {
+        "type": "slice",
+        "pattern": "src/slices/*"
+      },
+      {
+        "type": "feature",
+        "pattern": "src/features/*"
+      }
+    ]
   }
 }

@@ -19,7 +19,7 @@ const SideMenu = () => {
         />
       </Dialog.Trigger>
 
-      <Dialog.Content className='data-[state=open]:animate-slide-in-right data-[state=closed]:animate-slide-out-right fixed right-0 top-0 flex h-full w-3/5 max-w-64 flex-col rounded-none bg-white p-4 shadow-lg'>
+      <Dialog.Content className='fixed right-0 top-0 flex h-full w-3/5 max-w-64 flex-col rounded-none bg-white p-4 shadow-lg data-[state=closed]:animate-slide-out-right data-[state=open]:animate-slide-in-right'>
         <Dialog.Close className='mr-3 mt-3 self-end'>
           <Image
             src='/icons/close.svg'

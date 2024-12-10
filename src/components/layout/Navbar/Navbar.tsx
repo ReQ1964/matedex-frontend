@@ -8,7 +8,7 @@ import MainTabNav from '@/components/layout/TabNav/MainTabNav';
 const Navbar = () => {
   return (
     <Container size='3' className='bg-neutral-200'>
-      <Section size='1' pt='3' className='md:pb-0'>
+      <Section size='1' className='md:pb-0'>
         <Grid>
           <Box>
             <Flex
@@ -35,11 +35,13 @@ const Navbar = () => {
 
               <SideMenu />
 
-              <Avatar
-                fallback='U'
-                color='orange'
-                className='mt-3 hidden cursor-pointer md:block'
-              />
+              <Box display={{ initial: 'none', sm: 'block' }}>
+                <Avatar
+                  fallback='U'
+                  color='orange'
+                  className='mt-3 hidden cursor-pointer md:block'
+                />
+              </Box>
             </Flex>
 
             <Box display={{ initial: 'block', sm: 'none' }} px='4' pt='4'>

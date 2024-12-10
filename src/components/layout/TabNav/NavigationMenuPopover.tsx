@@ -1,8 +1,8 @@
 import React, { forwardRef, ReactNode } from 'react';
 import * as NavigationMenu from '@radix-ui/react-navigation-menu';
-import classNames from 'classnames';
 import Image from 'next/image';
 import { expandedGuideItems } from '@/data/guideItems';
+import classNames from 'classnames';
 
 interface ListItemProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   className?: string;
@@ -38,7 +38,7 @@ ListItem.displayName = 'ListItem';
 const NavigationMenuPopover = () => {
   return (
     <NavigationMenu.Root className='flex justify-center'>
-      <NavigationMenu.List className=''>
+      <NavigationMenu.List>
         <NavigationMenu.Item>
           <NavigationMenu.Trigger className='relative mt-1.5 inline-flex items-center justify-center rounded-md px-4 py-1 text-sm text-gray-700 transition hover:bg-[#0000330f] hover:text-black'>
             Guide
@@ -50,10 +50,12 @@ const NavigationMenuPopover = () => {
               height={20}
             />
           </NavigationMenu.Trigger>
-          <NavigationMenu.Content className='absolute left-0 top-0 w-full bg-neutral-200 sm:w-auto'>
+          <NavigationMenu.Content
+            className='absolute left-0 top-0 z-50 w-full bg-neutral-200 sm:w-auto' // Ensuring the highest z-index
+          >
             <ul
               style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}
-              className='w-[500px] grid-rows-3 gap-2.5 p-2'
+              className='z-50 w-[500px] grid-rows-3 gap-2.5 p-2'
             >
               {expandedGuideItems.map((item) => (
                 <ListItem
