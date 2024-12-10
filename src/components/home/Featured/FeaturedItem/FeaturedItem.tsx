@@ -9,16 +9,19 @@ interface FeaturedItemProps {
 }
 
 const FeaturedItem: React.FC<FeaturedItemProps> = ({ item }) => {
-  const { name, company, rating } = item;
+  const { id, name, company, rating } = item;
 
   return (
-    <Link href='/product' className='text-black no-underline'>
+    <Link
+      href={`/products/${id}`}
+      style={{ textDecoration: 'none', color: 'inherit' }}
+    >
       <Flex
         p='4'
         width='240px'
         justify='center'
         direction='column'
-        className='border-gray-20300 relative transform cursor-pointer rounded-xl border-2 border-gray-300 bg-white shadow-xl'
+        className='relative transform cursor-pointer rounded-xl border-2 bg-white shadow-xl transition-all duration-75 hover:border-gray-400 hover:shadow-2xl'
       >
         <Image
           src='/icons/argentina-flag.svg'

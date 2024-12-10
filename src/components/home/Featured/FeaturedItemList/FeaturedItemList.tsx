@@ -3,6 +3,7 @@ import FeaturedItem from '@/components/home/Featured/FeaturedItem/FeaturedItem';
 import { Flex } from '@radix-ui/themes';
 
 export interface FeaturedItem {
+  id: number;
   name: string;
   company: string;
   rating: number;
